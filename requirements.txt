@@ -1,0 +1,4 @@
+httpx[socks]>=0.27,<1
+rich>=13.7,<15
+PyYAML>=6,<7
+beautifulsoup4>=4.12,<5

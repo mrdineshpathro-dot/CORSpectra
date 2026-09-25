@@ -1,0 +1,13 @@
+timeout: 10
+threads: 10
+retries: 2
+rate_limit: 8
+follow_redirects: false
+verify_ssl: true
+crawl: false
+crawl_depth: 1
+max_pages: 30
+origins: []
+headers: {}
+proxy: null
+output_directory: reports

@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "corspectra"
+version = "1.0.0"
+description = "Advanced defensive CORS configuration analyzer"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Mr Dinesh Pathro"}]
+keywords = ["cors", "security", "kali", "appsec", "scanner"]
+dependencies = [
+  "httpx[socks]>=0.27,<1", "rich>=13.7,<15", "PyYAML>=6,<7",
+  "beautifulsoup4>=4.12,<5"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-asyncio>=0.23", "respx>=0.21", "ruff>=0.6"]
+
+[project.urls]
+Homepage = "https://github.com/mrdineshpathro-dot/CORSpectra"
+Funding = "https://buymeacoffee.com/mrdineshpathro"
+
+[project.scripts]
+corspectra = "corspectra.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["corspectra*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
